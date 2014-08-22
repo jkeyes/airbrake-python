@@ -32,6 +32,7 @@ def getLogger(name=None, **kwargs):
         name = os.path.split(
             callingpath.rpartition('.')[0] or callingpath)[-1]
         name = "%s%s" % ('airbrake-python-', name)
+
     logger = logging.getLogger(name)
 
     if not has_airbrake_handler(logger):
